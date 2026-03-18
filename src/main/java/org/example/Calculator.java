@@ -5,6 +5,9 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
     public static void main(String[] args) {
 
         String lang="ur";
@@ -35,5 +38,6 @@ public class Calculator {
         ResourceBundle rb=ResourceBundle.getBundle("MessagesBundle",loca);
         String message=rb.getString("wish");
         System.out.println(message);
+
     }
 }
