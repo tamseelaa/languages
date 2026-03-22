@@ -5,40 +5,128 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 <span class="fc" id="L7">public class Calculator {</span>
-    public int add(int a, int b) {
-<span class="fc" id="L9">        return a + b;</span>
-    }
-    public static void main(String[] args) {
 
-<span class="nc" id="L13">        String lang=&quot;ur&quot;;</span>
-<span class="nc" id="L14">        String country=&quot;PK&quot;;</span>
-<span class="nc" id="L15">        Scanner input = new Scanner(System.in);</span>
-<span class="nc" id="L16">        System.out.print(&quot;Enter your language number: &quot;);</span>
-<span class="nc" id="L17">        System.out.print(&quot;1: English&quot;);</span>
-<span class="nc" id="L18">        System.out.println(&quot;2: Finnish&quot;);</span>
-<span class="nc" id="L19">        System.out.print(&quot;3: Vitnamies&quot;);</span>
-<span class="nc" id="L20">        System.out.print(&quot;4: Urdu&quot;);</span>
-<span class="nc" id="L21">        Locale loca = null;</span>
-<span class="nc" id="L22">        int choice =  input.nextInt();</span>
-<span class="nc bnc" id="L23" title="All 5 branches missed.">        switch (choice) {</span>
+<span class="fc" id="L9">    private double current = 0;</span>
+
+    public double total(int quantity, double price) {
+
+<span class="fc" id="L13">        return quantity * price;</span>
+    }
+
+    public double add(int quantity, double price) {
+<span class="fc" id="L17">        double ad = total(quantity, price);</span>
+<span class="fc" id="L18">        current = current + ad;</span>
+<span class="fc" id="L19">        return current;</span>
+    }
+
+    public double remove(int quantity, double price) {
+<span class="fc" id="L23">        double rm = total(quantity, price);</span>
+<span class="fc" id="L24">        current = current - rm;</span>
+<span class="fc" id="L25">        return current;</span>
+    }
+
+    public double getCurrent() {
+<span class="fc" id="L29">        return current;</span>
+    }
+
+    public static void main(String[] args) {
+<span class="nc" id="L33">        Calculator calc = new Calculator();</span>
+
+<span class="nc" id="L35">        Scanner input = new Scanner(System.in);</span>
+
+<span class="nc" id="L37">        System.out.print(&quot;1: English\n&quot;);</span>
+<span class="nc" id="L38">        System.out.print(&quot;2: Finnish\n&quot;);</span>
+<span class="nc" id="L39">        System.out.print(&quot;3: Swedish\n&quot;);</span>
+<span class="nc" id="L40">        System.out.print(&quot;4: Japanese\n&quot;);</span>
+<span class="nc" id="L41">        System.out.print(&quot;5: Urdu\n&quot;);</span>
+<span class="nc" id="L42">        System.out.print(&quot;Enter your language number: &quot;);</span>
+
+<span class="nc" id="L44">        Locale loca = null;</span>
+<span class="nc" id="L45">        int choice = input.nextInt();</span>
+
+<span class="nc bnc" id="L47" title="All 6 branches missed.">        switch (choice) {</span>
             case 1:
-<span class="nc" id="L25">                loca=new Locale(&quot;en&quot;,&quot;US&quot;);</span>
-<span class="nc" id="L26">                break;</span>
+<span class="nc" id="L49">                loca = new Locale(&quot;en&quot;, &quot;US&quot;);</span>
+<span class="nc" id="L50">                break;</span>
             case 2:
-<span class="nc" id="L28">                loca=new Locale(&quot;fi&quot;,&quot;FI&quot;);</span>
-<span class="nc" id="L29">                break;</span>
+<span class="nc" id="L52">                loca = new Locale(&quot;fi&quot;, &quot;FI&quot;);</span>
+<span class="nc" id="L53">                break;</span>
             case 3:
-<span class="nc" id="L31">                loca=new Locale(&quot;vn&quot;,&quot;VN&quot;);</span>
-<span class="nc" id="L32">                break;</span>
+<span class="nc" id="L55">                loca = new Locale(&quot;sv&quot;, &quot;SE&quot;);</span>
+<span class="nc" id="L56">                break;</span>
             case 4:
-<span class="nc" id="L34">                loca=new Locale(&quot;ur&quot;,&quot;PK&quot;);</span>
-                break;
+<span class="nc" id="L58">                loca = new Locale(&quot;ja&quot;, &quot;JP&quot;);</span>
+<span class="nc" id="L59">                break;</span>
+            case 5:
+<span class="nc" id="L61">                loca = new Locale(&quot;ur&quot;, &quot;PK&quot;);</span>
+<span class="nc" id="L62">                break;</span>
+            default:
+<span class="nc" id="L64">                loca = new Locale(&quot;en&quot;, &quot;US&quot;);</span>
         }
 
-<span class="nc" id="L38">        ResourceBundle rb=ResourceBundle.getBundle(&quot;MessagesBundle&quot;,loca);</span>
-<span class="nc" id="L39">        String message=rb.getString(&quot;wish&quot;);</span>
-<span class="nc" id="L40">        System.out.println(message);</span>
+<span class="nc" id="L67">        ResourceBundle rb = ResourceBundle.getBundle(&quot;MessagesBundle&quot;, loca);</span>
 
-<span class="nc" id="L42">    }</span>
+<span class="nc" id="L69">        boolean leave = false;</span>
+
+<span class="nc" id="L71">        System.out.println(rb.getString(&quot;wish&quot;));</span>
+<span class="nc" id="L72">        System.out.println(rb.getString(&quot;greet&quot;));</span>
+
+<span class="nc bnc" id="L74" title="All 2 branches missed.">        while (!leave) {</span>
+
+<span class="nc" id="L76">            System.out.println(&quot;1: &quot; + rb.getString(&quot;add&quot;));</span>
+<span class="nc" id="L77">            System.out.println(&quot;2: &quot; + rb.getString(&quot;subs&quot;));</span>
+<span class="nc" id="L78">            System.out.println(&quot;3: &quot; + rb.getString(&quot;proceed&quot;));</span>
+<span class="nc" id="L79">            System.out.println(&quot;4: &quot; + rb.getString(&quot;cancel&quot;));</span>
+
+<span class="nc" id="L81">            int stage = input.nextInt();</span>
+
+<span class="nc bnc" id="L83" title="All 5 branches missed.">            switch (stage) {</span>
+
+                case 1:
+<span class="nc" id="L86">                    System.out.println(rb.getString(&quot;instruction&quot;));</span>
+
+<span class="nc" id="L88">                    System.out.println(rb.getString(&quot;prompt1&quot;));</span>
+<span class="nc" id="L89">                    int quantity = input.nextInt();</span>
+
+<span class="nc" id="L91">                    System.out.println(rb.getString(&quot;prompt2&quot;));</span>
+<span class="nc" id="L92">                    double price = input.nextDouble();</span>
+
+<span class="nc" id="L94">                    double added = calc.add(quantity, price);</span>
+<span class="nc" id="L95">                    System.out.println(rb.getString(&quot;current&quot;) + &quot;: &quot; + added);</span>
+<span class="nc" id="L96">                    break;</span>
+
+                case 2:
+<span class="nc" id="L99">                    System.out.println(rb.getString(&quot;instruction&quot;));</span>
+
+<span class="nc" id="L101">                    System.out.println(rb.getString(&quot;prompt1&quot;));</span>
+<span class="nc" id="L102">                    int quantitys = input.nextInt();</span>
+
+<span class="nc" id="L104">                    System.out.println(rb.getString(&quot;prompt2&quot;));</span>
+<span class="nc" id="L105">                    double prices = input.nextDouble();</span>
+
+<span class="nc" id="L107">                    double removed = calc.remove(quantitys, prices);</span>
+<span class="nc" id="L108">                    System.out.println(rb.getString(&quot;current&quot;) + &quot;: &quot; + removed);</span>
+<span class="nc" id="L109">                    break;</span>
+
+                case 3:
+<span class="nc" id="L112">                    System.out.println(rb.getString(&quot;proceed&quot;));</span>
+<span class="nc" id="L113">                    System.out.println(rb.getString(&quot;current&quot;) + &quot;: &quot; + calc.getCurrent());</span>
+<span class="nc" id="L114">                    System.out.println(rb.getString(&quot;exit&quot;));</span>
+<span class="nc" id="L115">                    leave = true;</span>
+<span class="nc" id="L116">                    break;</span>
+
+                case 4:
+<span class="nc" id="L119">                    leave = true;</span>
+<span class="nc" id="L120">                    System.out.println(rb.getString(&quot;cancel&quot;));</span>
+<span class="nc" id="L121">                    System.out.println(rb.getString(&quot;exit&quot;));</span>
+<span class="nc" id="L122">                    break;</span>
+
+                default:
+<span class="nc" id="L125">                    System.out.println(&quot;Invalid option&quot;);</span>
+            }
+<span class="nc" id="L127">        }</span>
+
+<span class="nc" id="L129">        input.close();</span>
+<span class="nc" id="L130">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>
