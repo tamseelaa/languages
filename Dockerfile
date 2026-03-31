@@ -17,7 +17,4 @@ RUN apt-get update && apt-get install -y wget unzip libgtk-3-0 libgl1-mesa-glx \
 
 COPY --from=build /app/target/*.jar app.jar
 
-CMD ["java",
-     "--module-path", "/opt/javafx/lib",
-     "--add-modules", "javafx.controls,javafx.fxml",
-     "-jar", "app.jar"]
+CMD ["java", "--module-path", "/opt/javafx/lib", "--add-modules", "javafx.controls,javafx.fxml", "-jar", "app.jar"]
