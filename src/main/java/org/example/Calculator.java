@@ -12,6 +12,9 @@ public class Calculator {
 
         return quantity * price;
     }
+    public void reset() {
+        current = 0;
+    }
 
     public double add(int quantity, double price) {
         double ad = total(quantity, price);
