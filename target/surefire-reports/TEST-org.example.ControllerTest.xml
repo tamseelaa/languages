@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.example.ControllerTest" time="13.795" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.example.ControllerTest" time="12.562" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sonar.projectName" value="Shoppingcart"/>
     <property name="java.specification.version" value="21"/>
@@ -21,7 +21,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\tamse\AppData\Local\Temp\surefire425234456425214732\surefirebooter-20260410015430031_3.jar C:\Users\tamse\AppData\Local\Temp\surefire425234456425214732 2026-04-10T01-54-29_697-jvmRun1 surefire-20260410015430031_1tmp surefire_0-20260410015430031_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\tamse\AppData\Local\Temp\surefire1809319895441452634\surefirebooter-20260410020717384_3.jar C:\Users\tamse\AppData\Local\Temp\surefire1809319895441452634 2026-04-10T02-07-17_059-jvmRun1 surefire-20260410020717384_1tmp surefire_0-20260410020717384_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\tamse\IdeaProjects\Languages\target\test-classes;C:\Users\tamse\IdeaProjects\Languages\target\classes;C:\Users\tamse\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;C:\Users\tamse\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\tamse\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\tamse\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\tamse\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\tamse\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\tamse\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\tamse\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\tamse\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\tamse\.m2\repository\org\mariadb\jdbc\mariadb-java-client\3.3.3\mariadb-java-client-3.3.3.jar;C:\Users\tamse\.m2\repository\com\github\waffle\waffle-jna\3.3.0\waffle-jna-3.3.0.jar;C:\Users\tamse\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\tamse\.m2\repository\net\java\dev\jna\jna-platform\5.13.0\jna-platform-5.13.0.jar;C:\Users\tamse\.m2\repository\org\slf4j\jcl-over-slf4j\2.0.7\jcl-over-slf4j-2.0.7.jar;C:\Users\tamse\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar;C:\Users\tamse\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.9.3\caffeine-2.9.3.jar;C:\Users\tamse\.m2\repository\com\google\errorprone\error_prone_annotations\2.10.0\error_prone_annotations-2.10.0.jar;C:\Users\tamse\.m2\repository\org\checkerframework\checker-qual\3.32.0\checker-qual-3.32.0.jar;C:\Users\tamse\.m2\repository\io\github\cdimascio\dotenv-java\3.0.0\dotenv-java-3.0.0.jar;C:\Users\tamse\.m2\repository\org\openjfx\javafx-controls\21\javafx-controls-21-win.jar;C:\Users\tamse\.m2\repository\org\openjfx\javafx-graphics\21\javafx-graphics-21.jar;C:\Users\tamse\.m2\repository\org\openjfx\javafx-graphics\21\javafx-graphics-21-win.jar;C:\Users\tamse\.m2\repository\org\openjfx\javafx-base\21\javafx-base-21.jar;C:\Users\tamse\.m2\repository\org\openjfx\javafx-base\21\javafx-base-21-win.jar;C:\Users\tamse\.m2\repository\org\openjfx\javafx-swing\21\javafx-swing-21-win.jar;C:\Users\tamse\.m2\repository\org\openjfx\javafx-fxml\21\javafx-fxml-21.jar;C:\Users\tamse\.m2\repository\org\openjfx\javafx-fxml\21\javafx-fxml-21-win.jar;C:\Users\tamse\.m2\repository\org\openjfx\javafx-controls\21\javafx-controls-21.jar;C:\Users\tamse\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\tamse\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\tamse\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\tamse\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -36,7 +36,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\tamse\AppData\Local\Temp\surefire425234456425214732\surefirebooter-20260410015430031_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\tamse\AppData\Local\Temp\surefire1809319895441452634\surefirebooter-20260410020717384_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.9+7-LTS-338"/>
@@ -66,8 +66,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testHandleProceed" classname="org.example.ControllerTest" time="7.849">
-    <system-err><![CDATA[Apr 10, 2026 1:54:37 AM com.sun.javafx.application.PlatformImpl startup
+  <testcase name="testHandleProceed" classname="org.example.ControllerTest" time="10.548">
+    <system-err><![CDATA[Apr 10, 2026 2:07:21 AM com.sun.javafx.application.PlatformImpl startup
 WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @78e94dcf'
 WARNING: A Java agent has been loaded dynamically (C:\Users\tamse\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
@@ -75,7 +75,7 @@ WARNING: If a serviceability tool is not in use, please run with -Djdk.instrumen
 WARNING: Dynamic loading of agents will be disallowed by default in a future release
 ]]></system-err>
   </testcase>
-  <testcase name="testHandleCancel" classname="org.example.ControllerTest" time="0.031"/>
-  <testcase name="testHandleRemove" classname="org.example.ControllerTest" time="0.156"/>
-  <testcase name="testHandleAdd" classname="org.example.ControllerTest" time="0.016"/>
+  <testcase name="testHandleCancel" classname="org.example.ControllerTest" time="0.015"/>
+  <testcase name="testHandleRemove" classname="org.example.ControllerTest" time="0.009"/>
+  <testcase name="testHandleAdd" classname="org.example.ControllerTest" time="0.013"/>
 </testsuite>

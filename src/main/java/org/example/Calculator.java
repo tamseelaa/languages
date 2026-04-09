@@ -31,6 +31,7 @@ public class Calculator {
     public double getCurrent() {
         return current;
     }
+/*
 
     public static void main(String[] args) {
         Calculator calc = new Calculator();
@@ -130,5 +131,5 @@ public class Calculator {
         }
 
         input.close();
-    }
+    }*/
 }
