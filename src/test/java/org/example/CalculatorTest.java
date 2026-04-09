@@ -16,41 +16,52 @@ class CalculatorTest {
 
     @Test
     void testTotal() {
-        assertEquals(10.0, calc.total(2, 5.0));
+        assertEquals(50.0, calc.total(5, 10.0));
         assertEquals(0.0, calc.total(0, 100.0));
-        assertEquals(7.5, calc.total(3, 2.5));
     }
 
     @Test
     void testAdd() {
-        double result1 = calc.add(2, 5.0); // 10
-        assertEquals(10.0, result1);
+        double result = calc.add(2, 10.0); // 20
+        assertEquals(20.0, result);
 
-        double result2 = calc.add(1, 3.0); // 13
-        assertEquals(13.0, result2);
+        result = calc.add(3, 5.0); // +15 → 35
+        assertEquals(35.0, result);
     }
 
     @Test
     void testRemove() {
-        calc.add(2, 5.0); // 10
+        calc.add(5, 10.0); // 50
 
-        double result = calc.remove(1, 5.0); // 5
-        assertEquals(5.0, result);
+        double result = calc.remove(2, 10.0); // -20 → 30
+        assertEquals(30.0, result);
+
+        result = calc.remove(3, 10.0); // -30 → 0
+        assertEquals(0.0, result);
     }
 
     @Test
-    void testSequenceOperations() {
-        calc.add(2, 5.0);   // 10
-        calc.add(1, 2.0);   // 12
-        calc.remove(1, 5.0);// 7
-
-        assertEquals(7.0, calc.getCurrent());
+    void testReset() {
+        calc.add(5, 10.0);
+        calc.reset();
+        assertEquals(0.0, calc.getCurrent());
     }
 
     @Test
-    void testNegativeTotalStillPossible() {
-        // exposing a remaining design flaw
-        double result = calc.remove(1, 10.0);
+    void testGetCurrent() {
+        assertEquals(0.0, calc.getCurrent());
+
+        calc.add(1, 25.0);
+        assertEquals(25.0, calc.getCurrent());
+    }
+
+    @Test
+    void testNegativeValues() {
+        // You didn’t validate input, so this is allowed (questionable design)
+        double result = calc.add(-2, 10.0); // -20
+        assertEquals(-20.0, result);
+
+        result = calc.remove(-1, 10.0); // +10 → -10
         assertEquals(-10.0, result);
     }
 }

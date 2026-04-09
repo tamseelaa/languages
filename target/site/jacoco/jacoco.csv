@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Languages,org.example.db,DatabaseConnection,3,20,0,0,1,5,1,2,1,2
+Languages,org.example.db,CartService,7,90,2,4,1,27,2,4,0,3
+Languages,org.example.db,LocalizationService,0,41,0,2,0,13,0,3,0,2
+Languages,org.example,MainApp,33,0,0,0,10,0,3,0,3,0
+Languages,org.example,Calculator,231,46,13,0,62,12,11,6,1,6
+Languages,org.example,Controller,31,279,5,0,7,48,5,7,1,7

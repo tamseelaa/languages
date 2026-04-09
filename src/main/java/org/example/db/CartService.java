@@ -23,7 +23,7 @@ public class CartService {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException("DB failure in saveCart", e);
         }
 
         return -1;
@@ -45,7 +45,7 @@ public class CartService {
             stmt.executeUpdate();
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException("DB failure in saveItem", e);
         }
     }
 }

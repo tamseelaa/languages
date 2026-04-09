@@ -1,0 +1,5 @@
+org\example\ControllerTest.class
+org\example\db\CartServiceTest.class
+org\example\db\DatabaseConnectionTest.class
+org\example\CalculatorTest.class
+org\example\db\LocalizationServiceTest.class
