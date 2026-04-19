@@ -31,22 +31,11 @@ pipeline {
 
 
         stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('SonarQubeServer') {
-                    withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-                        bat """
-                        ${tool 'SonarScanner'}\\bin\\sonar-scanner ^
-                        -Dsonar.projectKey=Shoppingcart ^
-                        -Dsonar.projectName=Shoppingcart ^
-                        -Dsonar.sources=src ^
-                        -Dsonar.host.url=http://localhost:9000 ^
-                        -Dsonar.token=sqb_214c08c6e36222a4e8b6c0861100e49f5cb34378 ^
-                        -Dsonar.java.binaries=target/classes
-                        """
-                    }
-                }
+            def mvn = tool 'Default Maven';
+            withSonarQubeEnv() {
+              sh "${mvn}/bin/mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Shoppingcart -Dsonar.projectName='Shoppingcart'"
             }
-        }
+          }
 
         stage('Build Docker Image') {
             steps {
