@@ -36,6 +36,7 @@ pipeline {
               sh "${mvn}/bin/mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Shoppingcart -Dsonar.projectName='Shoppingcart'"
             }
           }
+        }
 
         stage('Build Docker Image') {
             steps {
