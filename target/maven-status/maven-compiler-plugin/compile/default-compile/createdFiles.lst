@@ -1,6 +1,0 @@
-org\example\Calculator.class
-org\example\db\CartService.class
-org\example\db\LocalizationService.class
-org\example\Controller.class
-org\example\db\DatabaseConnection.class
-org\example\MainApp.class
